@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-dev-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss-dev-watch": "npx node-sass assets/scss/app.scss assets/css/app.min.css --source-map=true --output-style=compressed --watch",
+    "scss-deploy": "npx node-sass assets/scss/app.scss assets/css/app.min.css --output-style=compressed",
+    "js-compile": "npx webpack",
+    "compile-assets": "npm run js-compile && npm run scss-deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jquery": "^3.3.1",
+    "node-sass": "^4.11.0",
+    "npx": "^10.2.0",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  }
+}
