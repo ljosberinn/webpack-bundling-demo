@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scss-dev-watch": "npx node-sass assets/scss/app.scss assets/css/app.min.css --source-map=true --output-style=compressed --watch",
     "scss-deploy": "npx node-sass assets/scss/app.scss assets/css/app.min.css --output-style=compressed",
-    "js-compile": "npx webpack",
-    "compile-assets": "npm run js-compile && npm run scss-deploy"
+    "scss-watch": "npx node-sass assets/scss/app.scss assets/css/app.min.css --source-map=true --output-style=compressed --watch",
+
+    "js-deploy": "npx webpack",
+    "js-watch": "npx webpack --watch",
+
+    "deploy-assets": "npm run js-compile && npm run scss-deploy"
   },
   "keywords": [],
   "author": "",
